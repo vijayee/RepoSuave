@@ -1,0 +1,12 @@
+{
+  "name": "RepoSuave",
+  "title": "RepoSuave",
+  "version": "0.0.1",
+  "author": {
+    "name": "Vijayee Kulkaa",
+    "url": "https://github.com/vijayee/"
+  },
+  "devDependencies": {
+    "requirejs": "^2.1.15"
+  }
+}
