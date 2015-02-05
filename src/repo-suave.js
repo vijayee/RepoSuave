@@ -3,7 +3,7 @@ created by Vijayee Kulkaa
 */
 
 
-window.Repo=(function(){
+define('./repo-collection',function(Collection){
   'use strict';
   var repositories, defaultOptions;
   repositories={};
@@ -18,13 +18,15 @@ window.Repo=(function(){
       //handle rest endpoints
       if(isUrl(locator))
       {
-        key= options.repoName || String(locator).split("/").pop();
+        key= options.repoName || locator;
         repositories[key]=[];
         return repositories[key]
       }
+      //handle already retrieved repository
       else if(repositories[locator]){
         return null;
       }
+      //handle new repository
       else{
         repositories[locator]=[]
         return null;
